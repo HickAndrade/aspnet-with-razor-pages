@@ -15,19 +15,23 @@ namespace _01_AulaPerdida.Persistences
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CorridaAtleta>().HasKey(c => new { c.AtletaId, c.CorridaId });
 
-            modelBuilder.Entity<CorridaAtleta>()
-                .HasOne(c => c.Atleta).WithMany(c => c.CorridaAtletas).HasForeignKey(c => c.AtletaId);
+            modelBuilder.Entity<CorridaAtleta>().HasKey(c => new { c.AtletaId, c.CorridaId});
 
             modelBuilder.Entity<CorridaAtleta>().
-                HasOne(c => c.Corrida).WithMany(c => c.CorridaAtletas).HasForeignKey(c => c.CorridaId);
+                HasOne(c => c.Corrida).
+                WithMany(c => c.CorridaAtletas)
+                .HasForeignKey(c => c.CorridaId);
+
+            modelBuilder.Entity<CorridaAtleta>().
+                HasOne(c => c.Atleta).
+                WithMany(c => c.CorridaAtletas).
+                HasForeignKey(c => c.AtletaId);
+               
+
 
             base.OnModelCreating(modelBuilder);
         }
-
-
-
 
         public RacerContext(DbContextOptions op): base(op)
         {

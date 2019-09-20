@@ -1,0 +1,70 @@
+﻿@model IList<Corrida>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h2>Listar</h2>
+
+<mensagem texto="@TempData["mensagem"]"></mensagem>
+
+<form asp-action="Pesquisar" method="get" class="form-inline">
+    <input placeholder="Digite o nome" class="form-control" type="text" name="termoPesquisa" />
+    <input type="submit" class="btn btn-success" value="Pesquisar" style="border:2px solid black"/>
+</form>
+<br/>
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Distancia</th>
+        <th>Premiação</th>
+        <th>Categoria</th>
+        <th>Local Inicio</th>
+        <th>Distancia </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Distancia</td>
+            <td>@(item.Premiacao ? "Sim" : "Não")</td>
+            <td>@item.Categoria</td>
+            <td>@item.Trajeto.LocalInicio</td>
+            <th>@item.Trajeto.Distancia </th>
+            <th>
+                <a class="btn btn-success" asp-action="Editar" style="border-radius:5.5px;border:2px solid black" asp-route-id="@item.CorridaId">Editar</a>
+                <button onclick="caralho.value = @item.CorridaId"
+                        class="btn btn-danger" style="border-radius:5.5px;border:2px solid black" data-toggle="modal" data-target="#modalExemplo">
+                    Excluir
+                </button>
+            </th>
+
+        </tr>
+    }
+
+
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Deseja realmente excluir?
+                </div>
+                <div class="modal-footer">
+                    <form asp-action="Deletar">
+                        <input name="caralho" type="hidden" id="caralho" /> <!--Esse name e/ou id está referenciando o int id da action deletar?-->
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                        <button type="submit" class="btn btn-danger">Sim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</table>

@@ -46,7 +46,7 @@ namespace _01AulaPerdida.Migrations
 
                     b.Property<float>("Distancia");
 
-                    b.Property<int>("Nome");
+                    b.Property<string>("Nome");
 
                     b.Property<bool>("Premiacao");
 

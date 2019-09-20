@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Henri\\source\\repos\\01-AulaPerdida\\01-AulaPerdida\\01-AulaPerdida.csproj": {}
+    "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\01-AulaPerdida-Relacionamentos\\01-AulaPerdida\\01-AulaPerdida.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Henri\\source\\repos\\01-AulaPerdida\\01-AulaPerdida\\01-AulaPerdida.csproj": {
+    "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\01-AulaPerdida-Relacionamentos\\01-AulaPerdida\\01-AulaPerdida.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Henri\\source\\repos\\01-AulaPerdida\\01-AulaPerdida\\01-AulaPerdida.csproj",
+        "projectUniqueName": "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\01-AulaPerdida-Relacionamentos\\01-AulaPerdida\\01-AulaPerdida.csproj",
         "projectName": "01-AulaPerdida",
-        "projectPath": "C:\\Users\\Henri\\source\\repos\\01-AulaPerdida\\01-AulaPerdida\\01-AulaPerdida.csproj",
-        "packagesPath": "C:\\Users\\Henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Henri\\source\\repos\\01-AulaPerdida\\01-AulaPerdida\\obj\\",
+        "projectPath": "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\01-AulaPerdida-Relacionamentos\\01-AulaPerdida\\01-AulaPerdida.csproj",
+        "packagesPath": "C:\\Users\\logonrmlocal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\01-AulaPerdida-Relacionamentos\\01-AulaPerdida\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\logonrmlocal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,9 +53,14 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
             }
           },
           "imports": [

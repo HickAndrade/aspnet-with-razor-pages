@@ -11,7 +11,7 @@ namespace _01_AulaPerdida.Models
 
         [HiddenInput]
         public int CorridaId { get; set; }
-        public int Nome { get; set; }
+        public string Nome { get; set; }
 
         public float Distancia { get; set; }
 
@@ -20,6 +20,22 @@ namespace _01_AulaPerdida.Models
         public Categoria Categoria{ get; set; }
 
 
+
+        //Relacionamentos
+
+        //um-para-muitos
+        public IList<Medalha> Medalhas { get; set; }
+
+        //um-para-um
+        public int TrajetoId { get; set; }
+        public Trajeto Trajeto { get; set; }
+
+        //muitos-para-muitos
         public IList<CorridaAtleta> CorridaAtletas { get; set; }
+
+
+
+
+
     }
 }

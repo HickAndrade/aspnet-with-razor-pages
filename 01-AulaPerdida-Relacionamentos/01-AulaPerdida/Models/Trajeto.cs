@@ -14,5 +14,7 @@ namespace _01_AulaPerdida.Models
     [Display(Name = "Data de inicio")]
     public string LocalInicio { get; set; }
 
-}
+
+
+    }
 }

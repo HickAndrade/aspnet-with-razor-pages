@@ -23,7 +23,8 @@ namespace _01_AulaPerdida.Controllers
         [HttpGet]
         public IActionResult Pesquisar(string termoPesquisa) {
 
-            var lista = _context.Corridas.Where(c => c.Nome.Contains(termoPesquisa)).Include(c => c.Trajeto).ToList();
+            var lista = _context.Corridas.Where(c => c.Nome.Contains(termoPesquisa)).
+                Include(c => c.Trajeto).ToList();
 
             return View("listar", lista);
         }

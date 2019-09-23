@@ -13,5 +13,10 @@ namespace _01_AulaPerdida.Models
     public float Peso { get; set; }
 
     public int Quantidade { get; set; }
-}
+
+
+        //Relacionamentos-um-p-muitos
+        public Corrida Corrida { get; set; }
+        public int CorridaId { get; set; }
+    }
 }

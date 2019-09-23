@@ -66,3 +66,5 @@ C:\Users\Henri\Desktop\Samurai\Perdidos\01-AulaPerdida-Relacionamentos\01-AulaPe
 C:\Users\Henri\Desktop\Samurai\Perdidos\01-AulaPerdida-Relacionamentos\01-AulaPerdida\obj\Debug\netcoreapp2.1\Razor\Views\Corrida\Cadastrar.g.cshtml.cs
 C:\Users\Henri\Desktop\Samurai\Perdidos\01-AulaPerdida-Relacionamentos\01-AulaPerdida\obj\Debug\netcoreapp2.1\Razor\Views\Corrida\Listar.g.cshtml.cs
 C:\Users\Henri\Desktop\Samurai\Perdidos\01-AulaPerdida-Relacionamentos\01-AulaPerdida\obj\Debug\netcoreapp2.1\Razor\Views\Corrida\_formulario.g.cshtml.cs
+C:\Users\Henri\Desktop\Samurai\Perdidos\01-AulaPerdida-Relacionamentos\01-AulaPerdida\obj\Debug\netcoreapp2.1\Razor\Views\Medalha\Cadastrar.g.cshtml.cs
+C:\Users\Henri\Desktop\Samurai\Perdidos\01-AulaPerdida-Relacionamentos\01-AulaPerdida\obj\Debug\netcoreapp2.1\Razor\Views\Medalha\Listar.g.cshtml.cs

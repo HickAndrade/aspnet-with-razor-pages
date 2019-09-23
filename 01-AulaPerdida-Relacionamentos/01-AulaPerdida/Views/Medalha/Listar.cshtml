@@ -1,0 +1,36 @@
+﻿@model IList<Medalha>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h2>Listar</h2>
+
+<form asp-action="listar" method="get" asp-controller="Medalha">
+    <select asp-items="@ViewBag.corridas" class="form-control" name="corridaBusca">
+    <option>Selecione</option></select>
+    <input type="submit" value="Pesquisar"  class="btn btn-primary"/>
+</form>
+
+<mensagem texto="@TempData["mensagem"]"></mensagem>
+
+<table class="table">
+    <tr>
+        <th>Peso</th>
+        <th>Quantidade</th>
+        <th>Categoria</th>
+        <th>Corrida</th>
+    </tr>
+    @foreach (var item in Model) {
+
+<tr>
+    <td>@item.Peso</td>
+    <td>@item.Quantidade</td>
+    <td>@item.Categoria</td>
+    <td>@item.Corrida.Nome</td>
+    <td></td>
+
+    </tr>
+    }
+
+
+</table>

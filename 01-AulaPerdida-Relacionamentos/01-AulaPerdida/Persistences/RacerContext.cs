@@ -11,7 +11,10 @@ namespace _01_AulaPerdida.Persistences
 {
 
         public DbSet<Corrida> Corridas { get; set; }
-
+        public DbSet<Medalha> Medalhas { get; set; }
+        public DbSet<Atleta> Atletas { get; set; }
+        public DbSet<Trajeto> Trajetos { get; set; }
+        public DbSet<CorridaAtleta> CorridaAtletas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

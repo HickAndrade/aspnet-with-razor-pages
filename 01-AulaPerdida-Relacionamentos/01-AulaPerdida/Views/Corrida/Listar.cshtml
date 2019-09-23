@@ -19,7 +19,7 @@
         <th>Premiação</th>
         <th>Categoria</th>
         <th>Local Inicio</th>
-        <th>Distancia </th>
+        
         <th></th>
     </tr>
 
@@ -30,8 +30,7 @@
             <td>@item.Distancia</td>
             <td>@(item.Premiacao ? "Sim" : "Não")</td>
             <td>@item.Categoria</td>
-            <td>@item.Trajeto.LocalInicio</td>
-            <th>@item.Trajeto.Distancia </th>
+            <td>@item.Trajeto.LocalInicio</td>         
             <th>
                 <a class="btn btn-success" asp-action="Editar" style="border-radius:5.5px;border:2px solid black" asp-route-id="@item.CorridaId">Editar</a>
                 <button onclick="caralho.value = @item.CorridaId"

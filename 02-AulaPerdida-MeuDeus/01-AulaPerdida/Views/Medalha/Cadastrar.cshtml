@@ -1,0 +1,34 @@
+﻿@model Medalha
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+<mensagem texto="@TempData["mensagem"]"></mensagem>
+
+<form asp-action="Cadastrar" asp-controller="Medalha">
+    <div class="form-group">
+        <label asp-for="Peso"></label>
+        <input asp-for="Peso" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantidade"></label>
+        <input asp-for="Quantidade" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Categoria"></label>
+        <select asp-for="Categoria" 
+                asp-items="@Html.GetEnumSelectList<CategoriaMedalha>()">Selecione</select>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Corrida"></label>
+
+        <select asp-for="CorridaId" class="form-control" asp-items="@ViewBag.corridas">
+        <option value="0">Selecione</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+</form>

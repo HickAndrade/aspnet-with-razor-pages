@@ -68,17 +68,17 @@ using _01_AulaPerdida.Models;
             WriteLiteral("\r\n<h2>Listar</h2>\r\n\r\n");
             EndContext();
             BeginContext(86, 270, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e93d975d6c749649730a227662d299f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af753232195c4b71ac4ce0adf77de762", async() => {
                 BeginContext(150, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(156, 120, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47e2b2bedf1d4d23aab3dcca02672657", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c17167f8d3e3407d97f4eb5fcf599870", async() => {
                     BeginContext(235, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();
                     BeginContext(241, 26, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed35b97cc7504eeaaa86663300841c68", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f709b01c00145b6b5a5f14b29f23d1e", async() => {
                         BeginContext(249, 9, true);
                         WriteLiteral("Selecione");
                         EndContext();
@@ -142,7 +142,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = ViewBag.corridas;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(360, 51, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("mensagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57447417a2084a9c8c5dc4422e3b816b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("mensagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "41d6f12791c1429eaf208535f8945d4a", async() => {
             }
             );
             ___06_Fiap_Web_AspNet_TagHelpers_MensagemTagHelper = CreateTagHelper<global::_06_Fiap.Web.AspNet.TagHelpers.MensagemTagHelper>();

@@ -37,6 +37,9 @@
                         class="btn btn-danger" style="border-radius:5.5px;border:2px solid black" data-toggle="modal" data-target="#modalExemplo">
                     Excluir
                 </button>
+
+                <!--O asp-route meio que referencia a url com um indicador chave, sendo a chave primaria, reconhecendo e retornando o objeto-->
+                <a asp-action="listar" asp-controller="medalha" asp-route-corridaBusca="@item.CorridaId" class="btn btn-primary">Medalhas</a>
             </th>
 
         </tr>

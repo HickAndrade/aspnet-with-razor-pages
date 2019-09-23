@@ -68,7 +68,7 @@ using _01_AulaPerdida.Models;
             WriteLiteral("\r\n<h2>Cadastrar</h2>\r\n\r\n");
             EndContext();
             BeginContext(87, 51, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("mensagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "276b8895a74a4fefaa7edd46757617a5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("mensagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d28871a386714c929be479f9c317104a", async() => {
             }
             );
             ___06_Fiap_Web_AspNet_TagHelpers_MensagemTagHelper = CreateTagHelper<global::_06_Fiap.Web.AspNet.TagHelpers.MensagemTagHelper>();
@@ -94,12 +94,12 @@ using _01_AulaPerdida.Models;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(142, 177, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13e71bd680124b2781b30b16365977d5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42745e1f5de2482abef589b3e69db404", async() => {
                 BeginContext(196, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(202, 30, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c8b3f4b46f0d458db2ece56842745a7a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2dc399b9619840b7a0fbbf9f3fccf433", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

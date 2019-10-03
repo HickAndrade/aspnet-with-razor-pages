@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using theRealMVC.Models;
 using theRealMVC.Repositories;
 
 namespace theRealMVC.Controllers
@@ -10,13 +12,41 @@ namespace theRealMVC.Controllers
     public class PresidiarioController : Controller
     {
         private IPresidiarioRepository _PreRepository;
+        private ICelaRepository _celaRepository;
+
+
+        public PresidiarioController(IPresidiarioRepository presidiarioRepository, ICelaRepository celaRepository)
+        {
+            _celaRepository = celaRepository;
+            _PreRepository = presidiarioRepository;
+        }
 
 
 
         [HttpGet]
         public IActionResult Cadastrar()
         {
+            /*Fazemos toda essa parte de configuração para relacionar um presidiario a uma cela existente*/
+            var lista = _celaRepository.Listar();
+            ViewBag.celas = new SelectList(lista,"CelaId","Nome");
+            
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Presidiario presidiario) {
+            _PreRepository.Criar(presidiario);
+            _PreRepository.Salvar();
+            TempData["mensagem"] = "Cadastrado!!";
+
+            return RedirectToAction("Cela/Listar");
+        }
+
+      /*  public IActionResult CadastrarP(int codigo) {
+            var cela = _celaRepository.findById(codigo);
+            ViewBag.celas = new SelectList(cela,codigo);
+
+            return View();*/
+        }
+
     }
-}

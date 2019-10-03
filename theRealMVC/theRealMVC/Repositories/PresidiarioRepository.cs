@@ -51,5 +51,9 @@ namespace theRealMVC.Repositories
         {
             return _context.Presidiarios.ToList();
         }
+
+        public void Salvar() {
+             _context.SaveChanges();
+        }
     }
 }

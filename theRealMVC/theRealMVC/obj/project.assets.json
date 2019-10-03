@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Henri\\source\\repos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
       "projectName": "theRealMVC",
-      "projectPath": "C:\\Users\\Henri\\source\\repos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
+      "projectPath": "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
       "packagesPath": "C:\\Users\\Henri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Henri\\source\\repos\\theRealMVC\\theRealMVC\\obj\\",
+      "outputPath": "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

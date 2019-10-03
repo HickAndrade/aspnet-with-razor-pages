@@ -13,6 +13,8 @@ namespace theRealMVC.Repositories
    
         void Atualizar(Presidiario presidiario);
 
+        void Salvar();
+
         void Deletar(int id);
         Presidiario findById(int id);
 

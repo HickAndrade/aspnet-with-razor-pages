@@ -1,0 +1,63 @@
+﻿@model DetalheCelaViewModel
+
+@{
+    ViewData["Title"] = "Detalhar";
+}
+
+<h2>Detalhar</h2>
+
+<h1><span class="text-danger">@Model.Cela.Nome</span></h1>
+<h5>
+    
+    Quantidade Maxima: <span class="text-danger">@Model.Cela.QuantidadeMaxima</span>
+    Quantidade Atual:  <span class="text-danger">@Model.Presidiarios.Count</span>
+    Ocupação:  <span class="text-danger">@Model.Ocupacao %</span>
+</h5>
+
+
+<div class="row">
+    @foreach (var item in Model.Presidiarios)
+    {
+        <div class="col-3 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Nome </h5>
+                    <p class="card-text">
+                        Nível: <b>@item.nivelEscolaridade</b><br />
+                        Data Entrada:<br />
+                        <b>@item.dataEntrada</b><br />
+                        Data Saída:<br /><b>@item.dataSaida.ToShortDateString()</b><br />
+                        <br />
+                        Saída Temporária: <b>@(item.saidaTemporaria ? "Sim" : "Não")</b>
+                    </p>
+                    <!-- Botão para acionar modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                        Saída temporária
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@model Presidiario
+@{
+    ViewData["Title"] = "CadastrarP";
+}
+
+<h2>CadastrarP</h2>
+
+<form class="form-group">
+    <div>
+        <label asp-for="Nome">Nome: </label>
+        <input asp-for="Nome" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="dataEntrada">data Entrada: </label>
+        <input asp-for="dataEntrada" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="dataSaida">dataSaida: </label>
+        <input asp-for="dataSaida" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="nivelEscolaridade">Nivel Escolaridade: </label>
+        <select asp-items="@Html.GetEnumSelectList<NivelEscolaridade>()"><option>Selecione:</option></select>
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="Cadastrar" />
+</form>

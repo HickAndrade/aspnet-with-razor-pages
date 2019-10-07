@@ -1,0 +1,33 @@
+Materia do Japa
+As camadas de MVC feitas no intellij usando spring é feito da seguinte forma:
+
+ENTITY
+Diretorio Entity vão ficar as entidades que estão com as anotaçoes de mapeamento do banco de dados
+
+
+REPOSITORY
+Diretorio repository vão ficar as interfaces que fazem a comunicação entre o banco e o objeto que está sendo relacionado na aplicação, podendo usar na conversa dentro da controller
+
+CONTROLLER
+diretorio controller vão ficar os controllers que farão o CRUD com as anotações de Get e post Mapping, usando String como retorno;
+
+@RequestBody - é usado quando na pagina WEB é requisitado as informações referentes ao objeto do banco;
+
+@RequestParam - usado para comparar alguma requisitação com algum atributo do objeto;
+
+@PathVariable - é usado para pegar o ID referenciado na pagina WEB, podendo administrar os dados referentes ao objeto do banco;
+
+@ResponseStatus - é para saber qual o tipo de resposta a pagina HTTP está lidando ex( erro 404, erro 200(created), erro 500) etc;
+
+@RequestMapping - Usado depois da anotação @controller, Feita para dar referencia a pagina, podendo relacionar todas ações ao requestMapping definido.
+
+
+RESOURCE
+No diretorio resource ficarão os end points, Um crud que retorna um json, sendo um arquivo de resposta global, podendo usar em outras aplicaçoes
+
+Template fica as paginas HTML que serão referenciadas na controller
+
+Thymeleaf é um mecanismo HTML que facilita a implementação do Spring MVC na pagina WEB;
+
+Application.proprieties é aonde fica o banco H2 	
+

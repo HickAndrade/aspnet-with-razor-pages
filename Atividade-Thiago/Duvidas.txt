@@ -1,0 +1,4 @@
+7 - E não deixe o usuário cadastrar novamente, caso atualize a página após um
+cadastro. 
+
+10. Adicione um botão, na listagem de jogos, para alterar o valor da propriedade disponível para true. 

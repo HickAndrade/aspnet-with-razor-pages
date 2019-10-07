@@ -1,0 +1,16 @@
+Editado:
+
+Fiz as duas controllers, Cela e presidiario
+No cela eu fiz a action de cadastro, Listar, Detalhar
+
+No cadastro foram as actions padroes de Get e post, 
+No listar eu retornei a lista do metodo imposto no CelaRepository
+já o detalhar foi diferente, ele serve para dizer os detalhes sobre a cela e sobre os presidiarios, juntando informação de duas models diferentes
+
+Na pasta ViewModel eu adicionei DetalheCelaViewModel, nessa classe eu coloquei tanto a lista de usuarios quanto o Objeto Cela, e também uma propriedade float de ocupação, para poder tirar a porcentagem de presidiarios dentro da cela(Usando a quantidadeMaxima);
+
+Action detalhar com o parametro int codigo, o parametro será referenciado em um botão da tabela listar, com o metodo asp-route.
+
+Na action detalhar eu criei uma variavel presidiarios, referenciando o presidiario ao Id da cela usando a expressão Lambda, e também criei uma variavel cela referenciando o ID dela, depois, chamei o ViewModel para referenciar as propriedades dela as variaveis que criei na action.
+
+para poder usar-lá dentro da view, eu coloquei o objeto que instancia as variaveis as propriedades dentro do parametro da view.

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj": {}
+    "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj": {
+    "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
+        "projectUniqueName": "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
         "projectName": "theRealMVC",
-        "projectPath": "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
-        "packagesPath": "C:\\Users\\Henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Henri\\Desktop\\Samurai\\Perdidos\\theRealMVC\\theRealMVC\\obj\\",
+        "projectPath": "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\theRealMVC\\theRealMVC\\theRealMVC.csproj",
+        "packagesPath": "C:\\Users\\logonrmlocal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\logonrmlocal\\Desktop\\Perdidos\\theRealMVC\\theRealMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Henri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\logonrmlocal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,6 +53,7 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true

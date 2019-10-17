@@ -24,13 +24,13 @@
                     <p class="card-text">
                         Nível: <b>@item.nivelEscolaridade</b><br />
                         Data Entrada:<br />
-                        <b>@item.dataEntrada</b><br />
+                        <b>@item.dataEntrada.ToShortDateString()</b><br />
                         Data Saída:<br /><b>@item.dataSaida.ToShortDateString()</b><br />
                         <br />
                         Saída Temporária: <b>@(item.saidaTemporaria ? "Sim" : "Não")</b>
                     </p>
                     <!-- Botão para acionar modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                    <button onclick="mudarTexto('@item.saidaTemporaria');p.value = @item.PresidiarioId" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
                         Saída temporária
                     </button>
                 </div>
@@ -38,6 +38,23 @@
         </div>
     }
 </div>
+
+
+<script>
+    function mudarTexto(saida) {
+        if (saida == 'True') {
+
+            texto.innerHTML = "Vai sair mesmo?";
+        } else {
+
+            texto.innerHTML = "Vai entrar mesmo?";
+
+        }
+
+    }
+
+
+</script>
 
 
 <!-- Modal -->
@@ -51,11 +68,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+              <span id="texto"></span>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            <div class="modal-footer">  
+                <form asp-action="SaidaTemp">
+                    <input type="hidden" name="codigo" id="p" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Sim</button>
+                </form>
             </div>
         </div>
     </div>

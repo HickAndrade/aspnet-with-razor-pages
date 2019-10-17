@@ -31,11 +31,17 @@ namespace theRealMVC.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Cela cela)
         {
-            _celaRepository.Criar(cela);
-            _celaRepository.Save();
-            TempData["mensagem"] = "Cadastrado!!";
-
-            return RedirectToAction("Listar");
+            if (ModelState.IsValid)
+            {
+                _celaRepository.Criar(cela);
+                _celaRepository.Save();
+                TempData["mensagem"] = "Cadastrado!!";
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }
         }
 
 
@@ -66,6 +72,18 @@ namespace theRealMVC.Controllers
             return View(juntar);
         }
 
+        [HttpPost]
+        public IActionResult SaidaTemp(int codigo)
+        {
+            var presidiario = _preRepository.findById(codigo);
+
+            presidiario.saidaTemporaria = !presidiario.saidaTemporaria;
+            _preRepository.Atualizar(presidiario);
+            _preRepository.Salvar();
+
+
+            return RedirectToAction("Detalhar", new { codigo = presidiario.CelaId });
+        }
 
 
     }

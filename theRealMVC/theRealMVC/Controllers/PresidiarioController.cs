@@ -24,29 +24,27 @@ namespace theRealMVC.Controllers
 
 
         [HttpGet]
-        public IActionResult Cadastrar()
+        public IActionResult Cadastrar(int codigo)
         {
             /*Fazemos toda essa parte de configuração para relacionar um presidiario a uma cela existente*/
             var lista = _celaRepository.Listar();
-            ViewBag.celas = new SelectList(lista,"CelaId","Nome");
-            
-            return View();
+            ViewBag.celas = new SelectList(lista, "CelaId", "Nome");
+
+            return View(new Presidiario() { CelaId = codigo});
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Presidiario presidiario) {
+        public IActionResult Cadastrar(Presidiario presidiario)
+        {
+            
             _PreRepository.Criar(presidiario);
             _PreRepository.Salvar();
             TempData["mensagem"] = "Cadastrado!!";
 
-            return RedirectToAction("Cela/Listar");
+            return RedirectToAction("Listar", "Cela");
         }
 
-      /*  public IActionResult CadastrarP(int codigo) {
-            var cela = _celaRepository.findById(codigo);
-            ViewBag.celas = new SelectList(cela,codigo);
-
-            return View();*/
-        }
+        
 
     }
+}
